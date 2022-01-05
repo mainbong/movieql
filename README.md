@@ -70,5 +70,31 @@ $ mkdir movieql
 $ cd movieql
 $ yarn init
 
+// graphql 서버를 쉽게 만들 수 있는 startup 패키지?
+$ yarn add graphql
+$ yarn add graphql-yoga@alpha
 
+// 엄청 감단하고 네가 파일을 수정할 때마다 서버를 재시작 해줌.
+$ yarn global add nodemon
+
+// babel 설치
+yarn add @babel/cli --dev
+yarn add @babel/core --dev
+
+// preset 으로 env 를 설치. (가장 기본적으로 ES6 지원을 위한 preset 이라 보믄됨)
+yarn add @babel/preset-env --dev
+
+yarn add @babel/node --dev
+echo '{"presets": ["@babel/preset-env"]}' > babel.config.json
+```
+
+package json 에서 nodemon 사용하고 babel-node 로 컴파일하는 script 추가
+```json
+"scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+```
+
+```bashrc
+yarn start
 ```
