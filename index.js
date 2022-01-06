@@ -8,11 +8,13 @@ const server = createServer({
     typeDefs: /* GraphQL */ `
     type Movie {
         id: Int!
-        name: String!
-        score: Int!
+        title: String!
+        rating: Float!
+        language: String!
+        medium_cover_image: String!
     }
     type Query {
-        movies: [Movie]!
+        movies(limit: Int, rating: Float): [Movie]!
         movie(id: Int!): Movie
     }
 
