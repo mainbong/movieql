@@ -98,3 +98,9 @@ package json 에서 nodemon 사용하고 babel-node 로 컴파일하는 script �
 ```bashrc
 yarn start
 ```
+
+schema.graphql 파일에 사용자가 뭘할지 정의할 것임.
+그중 하나는 Query (Database로 부터 정보를 가져옴)
+Mutation 은 Database, Memory 혹은 서버에서 데이터를 수정하는 것.
+GraphQL 은 이런 스펙과 서버에 이러한 유형들을 저장하고 씀.
+어떤 Mutation, Query 를 쓸지 정의하는게 시작임.
